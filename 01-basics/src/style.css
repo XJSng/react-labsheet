@@ -1,0 +1,12 @@
+body {
+ margin: 10px;
+}
+
+.urgent {
+    background-color: yellow;
+}
+
+img {
+    width: 50%;
+    height: 50%
+}
