@@ -6,19 +6,37 @@ export default function NumberBox() {
 // 2. A function to modify the value of the variable
 // 3. userState(0) means start count variable with 0
 
-    return <div style={{
+// This if statement will work when 
+const getColor = () => {
+    if (count % 2 == 0) {
+        return "white";
+    } else {
+        return "black";
+    }
+}
+const randomColor = ()=> {
+        const randomColor = Math.floor(Math.random()*16777215).toString(16);
+        return "#" + randomColor;
+}
+
+    return <div clasName="numberBox" style={{
         padding:"10px",
         "text-align": "center",
-        width: "100px",
+        width: "200px",
         height: "50px",
-        border: "1px solid black"
+        border: "1px solid black",
+        margin: "0px 20px",
+        color: getColor(),
+        backgroundColor: randomColor()
     }} onClick={() => {
        // For React to know a state variable has changed is
        // to use the mutator function which is setCount
         // setCount(count + 1) // This works but is not preferred
-        setCount(()=> count+ 1) // This is preferred because stateCount is asynchronous
+        setCount((prevCount)=> prevCount + 1) // This is preferred because stateCount is asynchronous
     }}
-    >{count}</div>
+    >Count = {count}
+<br/>Color = {randomColor()}
+    </div>
 
 }
 
