@@ -32,7 +32,7 @@ const randomColor = ()=> {
        // For React to know a state variable has changed is
        // to use the mutator function which is setCount
         // setCount(count + 1) // This works but is not preferred
-        setCount((prevCount)=> prevCount + 1) // This is preferred because stateCount is asynchronous
+        setCount((roll)=> roll + 1) // This is preferred because stateCount is asynchronous
     }}
     >Count = {count}
 <br/>Color = {randomColor()}
