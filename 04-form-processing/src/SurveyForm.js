@@ -45,8 +45,6 @@ export default function SurveyForm() {
         }
     }
 
-
-
     return <>
         <h1>Survey Form</h1>
         <div>
